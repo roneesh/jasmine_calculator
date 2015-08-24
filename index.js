@@ -3,7 +3,7 @@ function Calculator() {
 
 	this.add = function() {
 		if (this.pipe[this.pipe.length - 1] === '+') {
-			throw new Error;
+			throw new Error('two addition signs can not be next to each other');
 		}
 		this.pipe.push('+');
 		return this;
