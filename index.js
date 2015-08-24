@@ -19,11 +19,10 @@ function Calculator() {
 	}
 
 	this.resolve = function() {
-		var result = null,
-			i,
+		var result = 0,
+			i, j,
 			pipeLen = this.pipe.length,
-			flattenIndices = [0],
-			that = this;
+			flattenIndices = [];
 		
 		for (i = 0; i < pipeLen; i++) {
 			if (this.pipe[i] === '+') {
@@ -31,13 +30,18 @@ function Calculator() {
 			}
 		}
 
-		flattenIndices.reduce(function(previousValue, currentValue) {
-			result += that.pipe.slice(previousValue, currentValue).reduce(function(a,b){
+		// flattenIndices.reduce(function(previousValue, currentValue) {
+		// 	result += that.pipe.slice(previousValue, currentValue).reduce(function(a,b){
+		// 		return a + b;
+		// 	});
+		// });
+		for (j = 0; j < flattenIndices.length; j++) {
+			result += this.pipe.slice( 0, (i - 1)).reduce(function(a,b) {
 				return a + b;
 			});
-		});
+		}
 
-		return result;
+		return ;
 		
 	}
 }

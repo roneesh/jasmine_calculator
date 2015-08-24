@@ -20,4 +20,10 @@ describe('calculator', function() {
 		expect(calculator.input(5).input(5).input(5).add().resolve()).toEqual(15);
 	});
 
+	it('resolves to a value after two add chains', function() {
+		var calculator = new app.Calculator();
+
+		expect(calculator.input(5).input(5).add().input(5).input(5).add().resolve()).toEqual(20);
+	})
+
 });
