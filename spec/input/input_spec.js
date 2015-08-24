@@ -9,4 +9,12 @@ describe('calculator input function', function() {
 		expect(typeof calculator.input).toBe('function');
 	});
 
+	it('takes puts a numerical input into its pipe', function() {
+		var calculator = new app.Calculator();
+
+		calculator.input(5);
+
+		expect(calculator.pipe).toBe([5]);
+	});
+
 });
