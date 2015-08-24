@@ -6,6 +6,10 @@ function Calculator() {
 	}
 	
 	this.input = function(number) {
+		if (typeof number !== 'number') {
+			throw new Error('calculator can only accept numbers');
+		}
+
 		return this.pipe.push(number);
 	}
 }
