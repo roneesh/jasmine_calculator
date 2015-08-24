@@ -19,7 +19,7 @@ describe('calculator', function() {
 
 		calculator.add();
 
-		expect(calculator.pipe[calculator.length - 1]).toEqual('+');
+		expect(calculator.pipe[calculator.pipe.length - 1]).toEqual('+');
 	});
 
 });
