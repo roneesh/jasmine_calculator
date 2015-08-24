@@ -25,10 +25,18 @@ describe('calculator input function', function() {
 		}).toThrowError('calculator can only accept numbers');
 	});
 
-	it('retuns the calculator object after input to allow chaining', function() {
+	it('returns the calculator object after input to allow chaining', function() {
 		var calculator = new app.Calculator();
 
 		expect(calculator.input(5)).toBe(calculator);
+	});
+
+	it('accepts two chained .input calls', function() {
+		var calculator = new app.Calculator();
+
+		calculator.input(5).input(5);
+
+		expect(calculator.pipe).toEqual([5,5]);
 	});
 
 });
