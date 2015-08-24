@@ -8,18 +8,10 @@ describe('calculator', function() {
 		expect(typeof calculator).toBe('object');
 	});
 
-	it('has an add function', function() {
+	it('resolves to a value', function() {
 		var calculator = new app.Calculator();
 
-		expect(typeof calculator.add).toBe('function');
-	})
-
-	it('has an add function that pushes a plus sign into the pipe', function() {
-		var calculator = new app.Calculator();
-
-		calculator.add();
-
-		expect(calculator.pipe[calculator.pipe.length - 1]).toEqual('+');
+		expect(calculator.input(5).input(5).add().resolve()).toEqual(10);
 	});
 
 });
