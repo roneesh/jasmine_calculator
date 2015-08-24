@@ -17,7 +17,7 @@ describe('calculator', function() {
 	it('resolves three numbers to a value', function() {
 		var calculator = new app.Calculator();
 
-		expect(calculator.input(5).input(5).input(5).resolve()).toEqual(15);
+		expect(calculator.input(5).input(5).input(5).add().resolve()).toEqual(15);
 	});
 
 });
