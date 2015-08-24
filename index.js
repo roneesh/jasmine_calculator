@@ -23,7 +23,10 @@ function Calculator() {
 	}
 
 	this.resolve = function() {
-		
+		var output = this.accumulator;
+		this.pipe = [];
+		this.accumulator = 0;
+		return output;
 	}
 }
 
