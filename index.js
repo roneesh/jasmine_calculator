@@ -2,6 +2,9 @@ function Calculator() {
 	this.pipe = [];
 
 	this.add = function() {
+		if (this.pipe[this.pipe.length - 1] === '+') {
+			throw new Error;
+		}
 		this.pipe.push('+');
 		return this;
 	}
