@@ -8,4 +8,10 @@ describe('calculator', function() {
 		expect(typeof calculator).toBe('object');
 	});
 
+	it('has an add function', function() {
+		var calculator = new app.Calculator();
+
+		expect(typeof calculator.add).toBe('function');
+	})
+
 });
