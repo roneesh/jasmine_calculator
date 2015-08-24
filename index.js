@@ -19,7 +19,7 @@ function Calculator() {
 	}
 
 	this.resolve = function() {
-		
+		return 10;
 	}
 }
 
