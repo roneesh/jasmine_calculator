@@ -2,7 +2,7 @@ function Calculator() {
 	this.pipe = [];
 
 	this.add = function() {
-		
+		return this.pipe.push('+');
 	}
 	
 	this.input = function(number) {
