@@ -17,4 +17,10 @@ describe('calculator add functionality', function() {
 		expect(calculator.pipe[calculator.pipe.length - 1]).toEqual('+');
 	});
 
+	it('has an add function that retuns the calculator objec to allow chaining', function() {
+		var calculator = new app.Calculator();
+
+		expect(calculator.add()).toBe(calculator);
+	});
+
 });
