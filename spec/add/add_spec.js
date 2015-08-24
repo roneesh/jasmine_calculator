@@ -23,4 +23,12 @@ describe('calculator add functionality', function() {
 		expect(calculator.add()).toBe(calculator);
 	});
 
+	it('throws an error if two addition signs are pushed into the pipe in a row', function() {
+		var calculator = new app.Calculator();
+
+		expect(function() {
+			calculator.add().add();
+		}).toThrowError('two addition signs can not be next to each other');
+	});
+
 });
