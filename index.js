@@ -1,5 +1,7 @@
 function Calculator() {
-
+	this.add = function() {
+		
+	}
 }
 
 module.exports = {
