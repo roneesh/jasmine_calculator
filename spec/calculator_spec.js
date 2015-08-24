@@ -14,10 +14,4 @@ describe('calculator', function() {
 		expect(typeof calculator.add).toBe('function');
 	})
 
-	it('has an input function to accept numerical input', function() {
-		var calculator = new app.Calculator();
-
-		expect(typeof calculator.input).toBe('function');
-	});
-
 });
