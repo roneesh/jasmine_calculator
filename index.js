@@ -17,6 +17,10 @@ function Calculator() {
 		this.pipe.push(number);
 		return this;
 	}
+
+	this.resolve = function() {
+		
+	}
 }
 
 module.exports = {
