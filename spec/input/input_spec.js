@@ -28,7 +28,7 @@ describe('calculator input function', function() {
 	it('retuns the calculator object after input to allow chaining', function() {
 		var calculator = new app.Calculator();
 
-		expect(calculator.input(5)).toEqual(calculator);
+		expect(calculator.input(5)).toBe(calculator);
 	});
 
 });
