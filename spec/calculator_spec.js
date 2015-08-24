@@ -8,19 +8,19 @@ describe('calculator', function() {
 		expect(typeof calculator).toBe('object');
 	});
 
-	it('resolves to a value', function() {
+	xit('resolves to a value', function() {
 		var calculator = new app.Calculator();
 
 		expect(calculator.input(5).input(5).add().resolve()).toEqual(10);
 	});
 
-	it('resolves three numbers to a value', function() {
+	xit('resolves three numbers to a value', function() {
 		var calculator = new app.Calculator();
 
 		expect(calculator.input(5).input(5).input(5).add().resolve()).toEqual(15);
 	});
 
-	it('resolves to a value after two add chains', function() {
+	xit('resolves to a value after two add chains', function() {
 		var calculator = new app.Calculator();
 
 		expect(calculator.input(5).input(5).add().input(5).input(5).add().resolve()).toEqual(20);

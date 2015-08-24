@@ -1,11 +1,16 @@
 function Calculator() {
 	this.pipe = [];
+	this.accumulator = 0;
 
 	this.add = function() {
-		if (this.pipe[this.pipe.length - 1] === '+') {
-			throw new Error('two addition signs can not be next to each other');
+		if (this.pipe.length > 0) {
+			this.accumulator += this.pipe.reduce(function(a,b) {
+				return a + b;
+			});
+			this.pipe = [ ];
 		}
-		this.pipe.push('+');
+
+		
 		return this;
 	}
 	

@@ -9,26 +9,18 @@ describe('calculator add functionality', function() {
 		expect(typeof calculator.add).toBe('function');
 	})
 
-	it('has an add function that pushes a plus sign into the pipe', function() {
-		var calculator = new app.Calculator();
-
-		calculator.add();
-
-		expect(calculator.pipe[calculator.pipe.length - 1]).toEqual('+');
-	});
-
-	it('has an add function that retuns the calculator objec to allow chaining', function() {
+	it('has an add function that retuns the calculator object to allow chaining', function() {
 		var calculator = new app.Calculator();
 
 		expect(calculator.add()).toBe(calculator);
 	});
 
-	it('throws an error if two addition signs are pushed into the pipe in a row', function() {
+	it('has an add function that sums up the preceeding numbers and adds it to the accumulator', function() {
+
 		var calculator = new app.Calculator();
 
-		expect(function() {
-			calculator.add().add();
-		}).toThrowError('two addition signs can not be next to each other');
+		expect(calculator.input(5).add().accumulator).toBe(5);
 	});
+
 
 });
