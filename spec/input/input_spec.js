@@ -17,4 +17,12 @@ describe('calculator input function', function() {
 		expect(calculator.pipe).toEqual([5]);
 	});
 
+	it('throws an error if input is not a number', function() {
+		var calculator = new app.Calculator();
+
+		expect(function() {
+			calculator.input('number');
+		}).toThrowError('calculator can only accept numbers');
+	});
+
 });
