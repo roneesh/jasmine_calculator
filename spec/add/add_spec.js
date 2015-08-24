@@ -22,5 +22,11 @@ describe('calculator add functionality', function() {
 		expect(calculator.input(5).add().accumulator).toBe(5);
 	});
 
+	it('has an add function that adds up 5 numbers and adds it to the accumulator', function() {
+		var calculator = new app.Calculator();
+
+		expect(calculator.input(5).input(5).input(5).input(5).input(5).add().accumulator).toBe(25);
+	});
+
 
 });
