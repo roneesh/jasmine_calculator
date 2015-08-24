@@ -14,4 +14,12 @@ describe('calculator', function() {
 		expect(typeof calculator.add).toBe('function');
 	})
 
+	it('has an add function that pushes a plus sign into the pipe', function() {
+		var calculator = new app.Calculator();
+
+		calculator.add();
+
+		expect(calculator.pipe[calculator.length - 1]).toEqual('+');
+	});
+
 });
