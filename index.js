@@ -1,4 +1,6 @@
 function Calculator() {
+	this.pipe = [];
+	
 	this.add = function() {
 
 	}
