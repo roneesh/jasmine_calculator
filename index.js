@@ -19,7 +19,26 @@ function Calculator() {
 	}
 
 	this.resolve = function() {
-		return 10;
+		var result = null,
+			i,
+			pipeLen = this.pipe.length,
+			flattenIndices = [0],
+			that = this;
+		
+		for (i = 0; i < pipeLen; i++) {
+			if (this.pipe[i] === '+') {
+				flattenIndices.push(i);
+			}
+		}
+
+		flattenIndices.reduce(function(previousValue, currentValue) {
+			result += that.pipe.slice(previousValue, currentValue).reduce(function(a,b){
+				return a + b;
+			});
+		});
+
+		return result;
+		
 	}
 }
 
