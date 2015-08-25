@@ -17,7 +17,8 @@ function Calculator() {
 		if (this.pipe.length > 0) {
 			this.accumulator -= this.pipe.reduce(function(a,b) {
 				return a - b;
-			});			
+			});		
+			this.pipe = [ ];	
 		}
 
 		return this;
