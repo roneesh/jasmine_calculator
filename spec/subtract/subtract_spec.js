@@ -15,4 +15,10 @@ describe('calculator subtract functionality', function() {
 		expect(calculator.subtract()).toBe(calculator);
 	});
 
+	it('has a function that subtracts the preceeding numbers from the accumulator', function() {
+		var calculator = new app.Calculator();
+
+		expect(calculator.input(10).add().input(5).subtract().accumulator).toEqual(5);
+	});
+
 });
