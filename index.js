@@ -14,6 +14,12 @@ function Calculator() {
 	}
 
 	this.subtract = function() {
+		if (this.pipe.length > 0) {
+			this.accumulator -= this.pipe.reduce(function(a,b) {
+				return a - b;
+			});			
+		}
+
 		return this;
 	}
 	
