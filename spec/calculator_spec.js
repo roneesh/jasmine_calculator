@@ -21,6 +21,8 @@ describe('calculator', function() {
 		var calculator = new app.Calculator();
 
 		expect(calculator.input(5).input(5).add().input(5).input(5).add().resolve()).toEqual(20);
+		expect(calculator.pipe).toEqual([]);
+		expect(calculator.accumulator).toEqual(0);
 	});
 
 });
