@@ -5,6 +5,7 @@ describe('calculator', function() {
 
 	it('initializes', function() {
 		var calculator = new app.Calculator();
+		
 		expect(typeof calculator).toBe('object');
 	});
 
@@ -20,6 +21,6 @@ describe('calculator', function() {
 		var calculator = new app.Calculator();
 
 		expect(calculator.input(5).input(5).add().input(5).input(5).add().resolve()).toEqual(20);
-	})
+	});
 
 });
