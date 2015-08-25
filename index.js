@@ -14,7 +14,7 @@ function Calculator() {
 	}
 
 	this.subtract = function() {
-
+		return this;
 	}
 	
 	this.input = function(number) {
