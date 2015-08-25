@@ -12,6 +12,10 @@ function Calculator() {
 
 		return this;
 	}
+
+	this.subtract = function() {
+
+	}
 	
 	this.input = function(number) {
 		if (typeof number !== 'number') {
