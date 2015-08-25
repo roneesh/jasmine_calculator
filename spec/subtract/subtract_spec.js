@@ -21,4 +21,10 @@ describe('calculator subtract functionality', function() {
 		expect(calculator.input(10).add().input(5).subtract().accumulator).toEqual(5);
 	});
 
+	it('has a subtract function that clears the pipe', function() {
+		var calculator = new app.Calculator();
+
+		expect(calculator.input(5).input(5).subtract().pipe).toEqual([]);
+	});
+
 });
